@@ -100,10 +100,10 @@
             height: 350px;
             border-radius: 50%;
             overflow: hidden;
-            border: 5px solid transparent;
-            background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
-            padding: 5px;
-            box-shadow: 0 0 40px rgba(255, 107, 107, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            background: transparent;
+            padding: 0;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
             animation: float 6s ease-in-out infinite;
         }
 
@@ -236,39 +236,55 @@
         }
 
         .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .skill-category h3 {
             font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             color: #feca57;
         }
 
         .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.5rem;
         }
 
         .skill-tag {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 25px;
-            padding: 0.8rem 1.5rem;
-            font-size: 0.9rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
             transition: all 0.3s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            min-height: 120px;
+            justify-content: center;
         }
 
         .skill-tag:hover {
-            background: rgba(255, 107, 107, 0.2);
+            background: rgba(255, 107, 107, 0.15);
             border-color: #ff6b6b;
-            transform: translateY(-3px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            opacity: 0.7;
+            color: #fff;
+            font-weight: 300;
         }
 
         .projects-grid {
@@ -321,13 +337,115 @@
             color: #48dbfb;
         }
 
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(255, 107, 107, 0.2);
+            border: 1px solid #ff6b6b;
+            border-radius: 8px;
+            color: #ff6b6b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            background: rgba(255, 107, 107, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .project-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
         .contact-content {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
         }
 
         .contact-info {
-            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
         }
 
         .contact-item {
@@ -384,6 +502,11 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
     </style>
 </head>
@@ -406,13 +529,14 @@
             <p>
                 Full-stack Software Developer with 4 years of experience in Java, React, and SQL. I build scalable, 
                 high-performance web applications and integrate RESTful APIs across modern architectures. Currently pursuing 
-                my Master's in Information Systems at Northeastern University with a 3.93 GPA. Passionate about creating 
-                efficient, user-centric solutions and optimizing database performance for enterprise-level applications.
+                my Master's in Information Systems at Northeastern University with a 3.93 GPA. Skilled in database design, 
+                automation, and deploying secure, reliable cloud-based solutions. Passionate about creating efficient, 
+                user-centric applications and optimizing system performance for enterprise-level deployments.
             </p>
         </div>
         <div class="hero-image">
             <div class="profile-img-container">
-                <img src="https://via.placeholder.com/350" alt="Tanya Bansal">
+                <img src="profile.jpg" alt="Tanya Bansal">
             </div>
         </div>
     </section>
@@ -429,11 +553,12 @@
                     </div>
                     <div class="timeline-role">Software Developer</div>
                     <ul>
-                        <li>Developed and integrated RESTful APIs using Java Spring Boot to establish secure, scalable communication between frontend and backend systems, improving response efficiency by 30%.</li>
-                        <li>Built and customized responsive UI components using React.js and jQuery to enhance cross-device user accessibility, reducing interface-related issues by 35%.</li>
-                        <li>Designed and optimized relational database structures, stored procedures, and functions in MSSQL to streamline backend processing and reduce query execution time by 40%.</li>
-                        <li>Automated build and deployment pipelines with Jenkins and Git to reduce manual intervention and accelerate release cycles.</li>
-                        <li>Collaborated in Agile development teams for sprint planning, code reviews, and backlog refinement, ensuring high-quality deliverables.</li>
+                        <li>Developed and integrated RESTful APIs using Java Spring Boot, enabling secure frontend-backend communication and improving system response efficiency by 30%.</li>
+                        <li>Implemented a scheduler-driven infrastructure layer to automate tasks and manage REST API integrations, automating 40% of recurring workflows and improving reliability of decoupled service communication.</li>
+                        <li>Built responsive UI components using React.js and jQuery, enhancing cross-device usability across multiple platforms and reducing interface-related defects by 35%.</li>
+                        <li>Designed and optimized MSSQL database schemas, stored procedures, and queries, reducing execution time by 40% under high-load conditions.</li>
+                        <li>Automated build and deployment pipelines using Git and Azure DevOps Pipelines, eliminating manual deployment effort by ~50% and enabling faster, more reliable production releases.</li>
+                        <li>Engaged in Agile sprints for planning, code reviews, and backlog refinement, delivering quality features on schedule.</li>
                     </ul>
                 </div>
             </div>
@@ -447,10 +572,10 @@
                     </div>
                     <div class="timeline-role">Service Validation Analyst</div>
                     <ul>
-                        <li>Led Regression and Load Testing efforts for a team of 190 members across multiple Jio applications, ensuring product stability and quality releases.</li>
-                        <li>Validated end-to-end RESTful API workflows between frontend and backend systems, reducing functional defects by 50% prior to deployment.</li>
-                        <li>Optimized backend performance by reviewing stored procedures and refining database structures, achieving a 99% defect resolution rate.</li>
-                        <li>Collaborated on technical solution design for the JioHealthHub application, ensuring a seamless, zero-critical-defect product launch.</li>
+                        <li>Led regression and load testing across multiple Jio applications for a 190-member team, ensuring production stability and on-time, release-ready deployments.</li>
+                        <li>Validated end-to-end API integrations between frontend and backend systems, resolving bottlenecks and reducing pre-release functional defects by 50%.</li>
+                        <li>Reviewed stored procedures and database structures to optimize backend performance, contributing to a 99% defect resolution rate before production rollout.</li>
+                        <li>Contributed to technical solution design for the JioHealthHub application, aligning workflows and backend integrations to deliver a zero-critical-defect production launch.</li>
                     </ul>
                 </div>
             </div>
@@ -470,8 +595,8 @@
                     <div class="timeline-role">Master of Science in Information Systems</div>
                     <p style="color: #ccc; margin-top: 1rem;">GPA: 3.93/4.0 | Boston, MA</p>
                     <p style="color: #ccc; margin-top: 0.5rem;">
-                        <strong>Relevant Courses:</strong> Data Science Engineering Methods and Tools (R), Advanced Data Science & Architecture (Python), 
-                        Neural Modeling and Tools (Python), Application Development (Java), Data Structures & Algorithms (Python)
+                        <strong>Relevant Courses:</strong> Application Development (Java), Web Application Development (Java, JavaScript, React), 
+                        Database Management & Design (Oracle SQL), Data Structures & Algorithms (Python), Prompt Engineering & AI (Python), UI/UX (Figma)
                     </p>
                 </div>
             </div>
@@ -494,56 +619,164 @@
         <h2 class="section-title">Skills.</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>Programming Languages</h3>
+                <h3>Programming & Fundamentals</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">PL/SQL</span>
-                    <span class="skill-tag">C/C++</span>
+                    <div class="skill-tag">
+                        <span class="skill-icon">{ }</span>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">Py</span>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">JS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">■</span>
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">▲</span>
+                        <span>PL/SQL</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">C++</span>
+                        <span>C/C++</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◆</span>
+                        <span>OOPs</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⊞</span>
+                        <span>Data Structures</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⊕</span>
+                        <span>Algorithms</span>
+                    </div>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3>Frontend Development</h3>
+                <h3>Frontend & Mobile</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">React.js</span>
-                    <span class="skill-tag">React Native</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">jQuery</span>
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">JSP</span>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⚛</span>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">≡</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">B</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◐</span>
+                        <span>Figma</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">$</span>
+                        <span>jQuery</span>
+                    </div>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3>Backend & Databases</h3>
+                <h3>Backend & API Development</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Express.js</span>
-                    <span class="skill-tag">Spring Framework</span>
-                    <span class="skill-tag">Spring MVC</span>
-                    <span class="skill-tag">Hibernate (JPA)</span>
-                    <span class="skill-tag">REST APIs</span>
-                    <span class="skill-tag">Oracle Database</span>
-                    <span class="skill-tag">PostgreSQL</span>
+                    <div class="skill-tag">
+                        <span class="skill-icon">❀</span>
+                        <span>Spring Framework</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⌘</span>
+                        <span>Spring MVC</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◎</span>
+                        <span>Hibernate/JPA</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◈</span>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⚡</span>
+                        <span>Express.js</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⊳</span>
+                        <span>RESTful APIs</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">▸</span>
+                        <span>FastAPI</span>
+                    </div>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3>Tools & DevOps</h3>
+                <h3>Databases & Storage</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Jenkins</span>
-                    <span class="skill-tag">Maven</span>
-                    <span class="skill-tag">CI/CD</span>
-                    <span class="skill-tag">Azure DevOps</span>
-                    <span class="skill-tag">Oracle Cloud</span>
-                    <span class="skill-tag">Azure Cloud</span>
-                    <span class="skill-tag">Postman</span>
-                    <span class="skill-tag">Agile</span>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⊞</span>
+                        <span>Oracle Database</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">▦</span>
+                        <span>MS SQL Server</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">☁</span>
+                        <span>Amazon S3</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>DevOps & Tools</h3>
+                <div class="skill-tags">
+                    <div class="skill-tag">
+                        <span class="skill-icon">※</span>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⬡</span>
+                        <span>Maven</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◫</span>
+                        <span>Docker</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⟳</span>
+                        <span>CI/CD</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◐</span>
+                        <span>Tomcat</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◇</span>
+                        <span>Azure DevOps</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">☁</span>
+                        <span>Oracle Cloud</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◉</span>
+                        <span>IntelliJ IDEA</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◈</span>
+                        <span>Postman</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -553,61 +786,59 @@
         <h2 class="section-title">Projects.</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <h3>ServiceDesk - IT Support System</h3>
+                <h3>Job Application Portal</h3>
                 <p>
-                    Built a full-stack Java web application enabling users to submit and track IT support tickets, 
-                    while administrators manage triage, prioritization, and resolution through Spring MVC-driven, 
-                    role-based dashboards.
+                    Developed a role-based full-stack web application using React and Spring Boot, supporting multiple 
+                    user roles and end-to-end job application workflows across 15+ application states, enabling candidate 
+                    tracking and employer reviews.
                 </p>
                 <p>
-                    Designed RESTful APIs and integrated Oracle Cloud Database using Hibernate ORM to deliver secure, 
-                    scalable, and transaction-safe real-time ticket workflows across the platform.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-badge">Java</span>
-                    <span class="tech-badge">Spring MVC</span>
-                    <span class="tech-badge">Hibernate</span>
-                    <span class="tech-badge">Oracle Cloud</span>
-                    <span class="tech-badge">REST API</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Co-op Application Portal</h3>
-                <p>
-                    Built a full-stack React and Spring Boot portal enabling students to apply for jobs and track 
-                    real-time updates, while employers manage postings and candidate reviews through dynamic dashboards.
-                </p>
-                <p>
-                    Designed RESTful APIs and integrated Oracle Cloud Database for secure, scalable, and responsive 
-                    data management within an Agile development environment.
+                    Integrated 20+ RESTful APIs using Spring MVC, Hibernate/JPA and normalized database, ensuring 
+                    ACID-compliant transactions, secure CRUD operations, and ~30% reduction in backend redundancy via 
+                    reusable service-layer design.
                 </p>
                 <div class="project-tech">
                     <span class="tech-badge">React</span>
                     <span class="tech-badge">Spring Boot</span>
-                    <span class="tech-badge">Oracle Cloud</span>
-                    <span class="tech-badge">REST API</span>
-                    <span class="tech-badge">Agile</span>
+                    <span class="tech-badge">REST APIs</span>
+                    <span class="tech-badge">Hibernate/JPA</span>
+                    <span class="tech-badge">Oracle DB</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/tanyabansal98/JobApplicationPortal" target="_blank" class="project-link">
+                        <svg viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
                 </div>
             </div>
 
             <div class="project-card">
-                <h3>Fusion Furnish - E-commerce Platform</h3>
+                <h3>Commuter Reservation System</h3>
                 <p>
-                    Built a React, Node.js, and Express.js e-commerce platform with secure JWT authentication, 
-                    payment integration (Stripe), and responsive UI.
+                    Designed a fully normalized (3NF) relational database in Oracle SQL comprising 20+ tables, modelling 
+                    trains, schedules, passengers, and reservations using constraints, sequences, and indexed primary/foreign 
+                    keys, ensuring data integrity while reducing redundancy by ~40%.
                 </p>
                 <p>
-                    Implemented RESTful APIs and optimized SQL queries to enhance performance. Deployed the application 
-                    on Oracle Cloud to ensure scalability and reliability across multiple user roles.
+                    Implemented 10+ PL/SQL packages, procedures and functions to manage reservation state transitions, 
+                    concurrency-safe seat allocation, and automated waitlist handling, ensuring 100% seat consistency under 
+                    concurrent booking scenarios.
                 </p>
                 <div class="project-tech">
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">Node.js</span>
-                    <span class="tech-badge">Express.js</span>
-                    <span class="tech-badge">JWT</span>
-                    <span class="tech-badge">Stripe</span>
-                    <span class="tech-badge">Oracle Cloud</span>
+                    <span class="tech-badge">Oracle SQL</span>
+                    <span class="tech-badge">PL/SQL</span>
+                    <span class="tech-badge">Database Design</span>
+                    <span class="tech-badge">Normalization</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Prasham09/Grp_3_Commuter_Reservation_System" target="_blank" class="project-link">
+                        <svg viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
                 </div>
             </div>
         </div>
@@ -633,6 +864,33 @@
                     <span>📍 Location:</span>
                     <span>Boston, MA</span>
                 </div>
+            </div>
+
+            <div class="contact-form">
+                <form action="https://formsubmit.co/tanyabansaloff@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    
+                    <!-- Hidden fields for FormSubmit configuration -->
+                    <input type="hidden" name="_subject" value="New Portfolio Contact from Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
