@@ -13,52 +13,33 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a0e27;
-            color: #e0e0e0;
+            background: #ffffff;
+            color: #1a1a1a;
             overflow-x: hidden;
         }
 
-        /* Starry background animation */
+        /* Starry background animation - removed for clean white background */
         .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
-        }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.2; }
-            50% { opacity: 0.6; }
+            display: none;
         }
 
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 14, 39, 0.95);
+            background: #ffffff;
             backdrop-filter: blur(10px);
             padding: 1.5rem 3rem;
             z-index: 1000;
             display: flex;
             justify-content: center;
             gap: 3rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 2px solid #e5e5e5;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         nav a {
-            color: #e0e0e0;
+            color: #1a1a1a;
             text-decoration: none;
             font-size: 1rem;
             transition: color 0.3s;
@@ -66,7 +47,7 @@
         }
 
         nav a:hover {
-            color: #60a5fa;
+            color: #dc2626;
         }
 
         section {
@@ -102,10 +83,10 @@
             height: 350px;
             border-radius: 50%;
             overflow: hidden;
-            border: 3px solid rgba(255, 255, 255, 0.3);
+            border: 3px solid #dc2626;
             background: transparent;
             padding: 0;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.2);
             animation: float 6s ease-in-out infinite;
         }
 
@@ -119,16 +100,17 @@
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
-            background: #1a2456;
+            background: #f5f5f5;
         }
 
         .hero h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
+            color: #1a1a1a;
         }
 
         .hero .name {
-            background: linear-gradient(90deg, #60a5fa 0%, #93c5fd 100%);
+            background: linear-gradient(90deg, #dc2626 0%, #ef4444 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -136,7 +118,7 @@
 
         .hero h2 {
             font-size: 1.5rem;
-            color: #9ca3af;
+            color: #4a4a4a;
             margin-bottom: 2rem;
         }
 
@@ -144,13 +126,14 @@
             font-size: 1.1rem;
             line-height: 1.8;
             max-width: 600px;
-            color: #d1d5db;
+            color: #2a2a2a;
         }
 
         .section-title {
             font-size: 3rem;
             margin-bottom: 3rem;
             text-align: left;
+            color: #1a1a1a;
         }
 
         .timeline {
@@ -166,7 +149,7 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: linear-gradient(180deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
+            background: linear-gradient(180deg, #dc2626 0%, #ef4444 50%, #f87171 100%);
         }
 
         .timeline-item {
@@ -182,14 +165,14 @@
             width: 15px;
             height: 15px;
             border-radius: 50%;
-            background: #60a5fa;
-            box-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+            background: #dc2626;
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
         }
 
         .timeline-content {
-            background: rgba(255, 255, 255, 0.03);
+            background: #fafafa;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid #e5e5e5;
             border-radius: 15px;
             padding: 2rem;
         }
@@ -203,18 +186,20 @@
 
         .timeline-header h3 {
             font-size: 1.8rem;
-            color: #f3f4f6;
+            color: #1a1a1a;
         }
 
         .timeline-header span {
-            color: #60a5fa;
+            color: #dc2626;
             font-size: 0.9rem;
+            font-weight: 600;
         }
 
         .timeline-role {
             font-size: 1.2rem;
-            color: #d1d5db;
+            color: #2a2a2a;
             margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .timeline-content ul {
@@ -226,7 +211,7 @@
             padding-left: 1.5rem;
             margin-bottom: 0.8rem;
             position: relative;
-            color: #9ca3af;
+            color: #4a4a4a;
             line-height: 1.6;
         }
 
@@ -234,7 +219,7 @@
             content: '▸';
             position: absolute;
             left: 0;
-            color: #60a5fa;
+            color: #dc2626;
         }
 
         .skills-grid {
@@ -248,7 +233,8 @@
         .skill-category h3 {
             font-size: 1.8rem;
             margin-bottom: 2rem;
-            color: #60a5fa;
+            color: #dc2626;
+            font-weight: 700;
         }
 
         .skill-tags {
@@ -258,9 +244,9 @@
         }
 
         .skill-tag {
-            background: rgba(255, 255, 255, 0.03);
+            background: #fafafa;
             backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            border: 2px solid #e5e5e5;
             border-radius: 15px;
             padding: 2rem 1.5rem;
             font-size: 1rem;
@@ -273,20 +259,20 @@
             gap: 0.8rem;
             min-height: 120px;
             justify-content: center;
-            color: #e0e0e0;
+            color: #1a1a1a;
         }
 
         .skill-tag:hover {
-            background: rgba(96, 165, 250, 0.1);
-            border-color: #60a5fa;
+            background: #ffffff;
+            border-color: #dc2626;
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.15);
         }
 
         .skill-icon {
             font-size: 2.5rem;
             opacity: 0.7;
-            color: #fff;
+            color: #1a1a1a;
             font-weight: 300;
         }
 
@@ -299,9 +285,9 @@
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: #fafafa;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid #e5e5e5;
             border-radius: 15px;
             padding: 2rem;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -309,18 +295,19 @@
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 40px rgba(96, 165, 250, 0.15);
-            border-color: rgba(96, 165, 250, 0.3);
+            box-shadow: 0 10px 40px rgba(220, 38, 38, 0.15);
+            border-color: #dc2626;
         }
 
         .project-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #60a5fa;
+            color: #dc2626;
+            font-weight: 700;
         }
 
         .project-card p {
-            color: #9ca3af;
+            color: #4a4a4a;
             line-height: 1.6;
             margin-bottom: 1rem;
         }
@@ -333,12 +320,13 @@
         }
 
         .tech-badge {
-            background: rgba(96, 165, 250, 0.1);
-            border: 1px solid rgba(96, 165, 250, 0.3);
+            background: #ffffff;
+            border: 1px solid #dc2626;
             border-radius: 15px;
             padding: 0.4rem 0.8rem;
             font-size: 0.8rem;
-            color: #60a5fa;
+            color: #dc2626;
+            font-weight: 500;
         }
 
         .project-links {
@@ -352,19 +340,20 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.6rem 1.2rem;
-            background: rgba(96, 165, 250, 0.1);
-            border: 1px solid #60a5fa;
+            background: #dc2626;
+            border: 1px solid #dc2626;
             border-radius: 8px;
-            color: #60a5fa;
+            color: #ffffff;
             text-decoration: none;
             font-size: 0.9rem;
             transition: all 0.3s;
+            font-weight: 500;
         }
 
         .project-link:hover {
-            background: rgba(96, 165, 250, 0.2);
+            background: #b91c1c;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(96, 165, 250, 0.2);
+            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
         }
 
         .project-link svg {
@@ -531,16 +520,15 @@
             <h1>Hi, I'm <span class="name">Tanya Bansal</span></h1>
             <h2>Full Stack Developer | Software Engineer</h2>
             <p>
-                Full-stack Software Developer with 4 years of experience in Java, React, and SQL. I build scalable, 
-                high-performance web applications and integrate RESTful APIs across modern architectures. Currently pursuing 
-                my Master's in Information Systems at Northeastern University with a 3.93 GPA. Skilled in database design, 
-                automation, and deploying secure, reliable cloud-based solutions. Passionate about creating efficient, 
-                user-centric applications and optimizing system performance for enterprise-level deployments.
+                Software Engineer with 4+ years building scalable web applications, microservices, and REST APIs using Spring Boot, 
+                optimizing performance through concurrent request handling, Redis caching, and database engineering via Azure DevOps pipelines. 
+                Currently pursuing my Master's in Information Systems at Northeastern University with a 3.94 GPA. Integrating AI/ML models 
+                and large language models (LLMs) to enable intelligent, data-driven workflows.
             </p>
         </div>
         <div class="hero-image">
             <div class="profile-img-container">
-                <img src="profile.jpg" alt="Tanya Bansal">
+                <img src="profile2.jpg" alt="Tanya Bansal">
             </div>
         </div>
     </section>
@@ -557,12 +545,11 @@
                     </div>
                     <div class="timeline-role">Software Developer</div>
                     <ul>
-                        <li>Developed and integrated RESTful APIs using Java Spring Boot, enabling secure frontend-backend communication and improving system response efficiency by 30%.</li>
-                        <li>Implemented a scheduler-driven infrastructure layer to automate tasks and manage REST API integrations, automating 40% of recurring workflows and improving reliability of decoupled service communication.</li>
-                        <li>Built responsive UI components using React.js and jQuery, enhancing cross-device usability across multiple platforms and reducing interface-related defects by 35%.</li>
-                        <li>Designed and optimized MSSQL database schemas, stored procedures, and queries, reducing execution time by 40% under high-load conditions.</li>
-                        <li>Automated build and deployment pipelines using Git and Azure DevOps Pipelines, eliminating manual deployment effort by ~50% and enabling faster, more reliable production releases.</li>
-                        <li>Engaged in Agile sprints for planning, code reviews, and backlog refinement, delivering quality features on schedule.</li>
+                        <li>Architected and implemented secure, production-grade RESTful APIs using Spring Boot, leveraging dependency injection and reusable service-layer interfaces to optimize request processing and reducing average response latency by 30%.</li>
+                        <li>Designed and implemented a centralized orchestration layer to integrate AI/ML model inference pipelines, feature processing services, data ingestion and transactional data workflows, resulting in a 40% reduction in operational overhead.</li>
+                        <li>Developed reusable, state-driven React components integrated with backend services, improving cross-device responsiveness and reducing UI-related production defects by 35%.</li>
+                        <li>Led database migration and schema design across MSSQL and Oracle environments, engineering optimized indexing strategies to handle high transactional loads, reducing query execution time by 40%.</li>
+                        <li>Automated build, test, and deployment workflows using Azure DevOps and CI/CD pipelines, reducing manual release cycles by 50% and improving cross-environment deployment consistency.</li>
                     </ul>
                 </div>
             </div>
@@ -574,12 +561,12 @@
                         <h3>Jio Platforms Limited</h3>
                         <span>Dec 2020 - Dec 2021</span>
                     </div>
-                    <div class="timeline-role">Service Validation Analyst</div>
+                    <div class="timeline-role">Junior Software Developer</div>
                     <ul>
-                        <li>Led regression and load testing across multiple Jio applications for a 190-member team, ensuring production stability and on-time, release-ready deployments.</li>
-                        <li>Validated end-to-end API integrations between frontend and backend systems, resolving bottlenecks and reducing pre-release functional defects by 50%.</li>
-                        <li>Reviewed stored procedures and database structures to optimize backend performance, contributing to a 99% defect resolution rate before production rollout.</li>
-                        <li>Contributed to technical solution design for the JioHealthHub application, aligning workflows and backend integrations to deliver a zero-critical-defect production launch.</li>
+                        <li>Implemented Redis-based distributed caching and session management for high-traffic Spring services, significantly reducing database load and improving peak-time response performance by ~50%.</li>
+                        <li>Built automated unit and API test suites using JUnit, Mockito and REST Assured, spearheading regression testing and reducing production defects by 30%.</li>
+                        <li>Engineered SQL and NoSQL database structures and stored procedures to optimise backend performance, contributing to a 99% defect resolution rate before production rollout.</li>
+                        <li>Collaborated in Agile SDLC environments using Git-based version control to debug and troubleshoot end-to-end API integrations between frontend and backend, resolving bottlenecks and reducing pre-release defects by 50%.</li>
                     </ul>
                 </div>
             </div>
@@ -597,9 +584,9 @@
                         <span>Jan 2025 - May 2027</span>
                     </div>
                     <div class="timeline-role">Master of Science in Information Systems</div>
-                    <p style="color: #ccc; margin-top: 1rem;">GPA: 3.93/4.0 | Boston, MA</p>
-                    <p style="color: #ccc; margin-top: 0.5rem;">
-                        <strong>Relevant Courses:</strong> Application Development (Java), Web Application Development (Java, JavaScript, React), 
+                    <p style="color: #9ca3af; margin-top: 1rem;">GPA: 3.94/4.0 | Boston, MA</p>
+                    <p style="color: #9ca3af; margin-top: 0.5rem;">
+                        <strong>Relevant Courses:</strong> Application Development (Java), Web Application Development (Spring Boot MVC, JavaScript, React), 
                         Database Management & Design (Oracle SQL), Data Structures & Algorithms (Python), Prompt Engineering & AI (Python), UI/UX (Figma)
                     </p>
                 </div>
@@ -638,20 +625,16 @@
                         <span>JavaScript</span>
                     </div>
                     <div class="skill-tag">
-                        <span class="skill-icon">■</span>
-                        <span>SQL</span>
+                        <span class="skill-icon">TS</span>
+                        <span>TypeScript</span>
                     </div>
                     <div class="skill-tag">
-                        <span class="skill-icon">▲</span>
+                        <span class="skill-icon">■</span>
                         <span>PL/SQL</span>
                     </div>
                     <div class="skill-tag">
                         <span class="skill-icon">C++</span>
                         <span>C/C++</span>
-                    </div>
-                    <div class="skill-tag">
-                        <span class="skill-icon">◆</span>
-                        <span>OOPs</span>
                     </div>
                     <div class="skill-tag">
                         <span class="skill-icon">⊞</span>
@@ -661,11 +644,15 @@
                         <span class="skill-icon">⊕</span>
                         <span>Algorithms</span>
                     </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◆</span>
+                        <span>OOPs</span>
+                    </div>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3>Frontend & Mobile</h3>
+                <h3>Frontend</h3>
                 <div class="skill-tags">
                     <div class="skill-tag">
                         <span class="skill-icon">⚛</span>
@@ -680,29 +667,41 @@
                         <span>Bootstrap</span>
                     </div>
                     <div class="skill-tag">
-                        <span class="skill-icon">◐</span>
-                        <span>Figma</span>
+                        <span class="skill-icon">▸</span>
+                        <span>Next.js</span>
                     </div>
                     <div class="skill-tag">
                         <span class="skill-icon">$</span>
                         <span>jQuery</span>
                     </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⚡</span>
+                        <span>AJAX</span>
+                    </div>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3>Backend & API Development</h3>
+                <h3>Web Development</h3>
                 <div class="skill-tags">
                     <div class="skill-tag">
-                        <span class="skill-icon">❀</span>
-                        <span>Spring Framework</span>
-                    </div>
-                    <div class="skill-tag">
-                        <span class="skill-icon">⌘</span>
-                        <span>Spring MVC</span>
+                        <span class="skill-icon">🍃</span>
+                        <span>Spring Boot</span>
                     </div>
                     <div class="skill-tag">
                         <span class="skill-icon">◎</span>
+                        <span>Dependency Injection</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">📡</span>
+                        <span>Spring MVC</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⬡</span>
+                        <span>Microservices</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">💾</span>
                         <span>Hibernate/JPA</span>
                     </div>
                     <div class="skill-tag">
@@ -710,16 +709,34 @@
                         <span>Node.js</span>
                     </div>
                     <div class="skill-tag">
-                        <span class="skill-icon">⚡</span>
-                        <span>Express.js</span>
+                        <span class="skill-icon">⊳</span>
+                        <span>REST APIs</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">{ }</span>
+                        <span>JSON</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Testing</h3>
+                <div class="skill-tags">
+                    <div class="skill-tag">
+                        <span class="skill-icon">✓</span>
+                        <span>JUnit</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◐</span>
+                        <span>Mockito</span>
                     </div>
                     <div class="skill-tag">
                         <span class="skill-icon">⊳</span>
-                        <span>RESTful APIs</span>
+                        <span>REST Assured</span>
                     </div>
                     <div class="skill-tag">
-                        <span class="skill-icon">▸</span>
-                        <span>FastAPI</span>
+                        <span class="skill-icon">◈</span>
+                        <span>Postman</span>
                     </div>
                 </div>
             </div>
@@ -732,8 +749,24 @@
                         <span>Oracle Database</span>
                     </div>
                     <div class="skill-tag">
+                        <span class="skill-icon">◐</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-tag">
                         <span class="skill-icon">▦</span>
                         <span>MS SQL Server</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◆</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">❄</span>
+                        <span>Snowflake</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◈</span>
+                        <span>Redis</span>
                     </div>
                     <div class="skill-tag">
                         <span class="skill-icon">☁</span>
@@ -743,43 +776,47 @@
             </div>
 
             <div class="skill-category">
-                <h3>DevOps & Tools</h3>
+                <h3>DevOps & Cloud</h3>
                 <div class="skill-tags">
-                    <div class="skill-tag">
-                        <span class="skill-icon">※</span>
-                        <span>Git</span>
-                    </div>
-                    <div class="skill-tag">
-                        <span class="skill-icon">⬡</span>
-                        <span>Maven</span>
-                    </div>
                     <div class="skill-tag">
                         <span class="skill-icon">◫</span>
                         <span>Docker</span>
                     </div>
                     <div class="skill-tag">
+                        <span class="skill-icon">※</span>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⬡</span>
+                        <span>Kubernetes</span>
+                    </div>
+                    <div class="skill-tag">
                         <span class="skill-icon">⟳</span>
-                        <span>CI/CD</span>
+                        <span>CI/CD Pipeline</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">◐</span>
+                        <span>Jenkins</span>
                     </div>
                     <div class="skill-tag">
                         <span class="skill-icon">◐</span>
                         <span>Tomcat</span>
                     </div>
                     <div class="skill-tag">
+                        <span class="skill-icon">⬡</span>
+                        <span>Maven</span>
+                    </div>
+                    <div class="skill-tag">
                         <span class="skill-icon">◇</span>
                         <span>Azure DevOps</span>
                     </div>
                     <div class="skill-tag">
-                        <span class="skill-icon">☁</span>
-                        <span>Oracle Cloud</span>
-                    </div>
-                    <div class="skill-tag">
-                        <span class="skill-icon">◉</span>
-                        <span>IntelliJ IDEA</span>
-                    </div>
-                    <div class="skill-tag">
                         <span class="skill-icon">◈</span>
-                        <span>Postman</span>
+                        <span>Jira</span>
+                    </div>
+                    <div class="skill-tag">
+                        <span class="skill-icon">⚡</span>
+                        <span>LLM Integration</span>
                     </div>
                 </div>
             </div>
@@ -792,21 +829,30 @@
             <div class="project-card">
                 <h3>Job Application Portal</h3>
                 <p>
-                    Developed a role-based full-stack web application using React and Spring Boot, supporting multiple 
-                    user roles and end-to-end job application workflows across 15+ application states, enabling candidate 
-                    tracking and employer reviews.
+                    Developed a full-stack web application using React and Spring Boot with <strong>microservices containerization via multi-container 
+                    Docker</strong>, <strong>dedicated JWT authentication microservice for RBAC and Redis caching</strong>, supporting workflows across 8 application 
+                    states, enabling candidate tracking and employer reviews.
                 </p>
                 <p>
-                    Integrated 20+ RESTful APIs using Spring MVC, Hibernate/JPA and normalized database, ensuring 
-                    ACID-compliant transactions, secure CRUD operations, and ~30% reduction in backend redundancy via 
-                    reusable service-layer design.
+                    Integrated <strong>20+ RESTful APIs</strong> using Spring Boot MVC, <strong>Hibernate/JPA</strong> and normalized database, ensuring 
+                    ACID-compliant transactions, secure CRUD operations, and <strong>~30% reduction in backend redundancy</strong> via reusable service-layer design.
+                </p>
+                <p>
+                    Built an <strong>LLM-powered RAG pipeline using OpenAI GPT API</strong> to enable AI-driven candidate-job matching, retrieving and 
+                    ranking relevant job listings against applicant profiles for personalized recommendations.
                 </p>
                 <div class="project-tech">
-                    <span class="tech-badge">React</span>
                     <span class="tech-badge">Spring Boot</span>
-                    <span class="tech-badge">REST APIs</span>
-                    <span class="tech-badge">Hibernate/JPA</span>
+                    <span class="tech-badge">React</span>
                     <span class="tech-badge">Oracle DB</span>
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">JWT</span>
+                    <span class="tech-badge">Redis</span>
+                    <span class="tech-badge">Microservices</span>
+                    <span class="tech-badge">Hibernate/JPA</span>
+                    <span class="tech-badge">LLM</span>
+                    <span class="tech-badge">RAG</span>
+                    <span class="tech-badge">OpenAI GPT</span>
                 </div>
                 <div class="project-links">
                     <a href="https://github.com/tanyabansal98/JobApplicationPortal" target="_blank" class="project-link">
@@ -821,20 +867,20 @@
             <div class="project-card">
                 <h3>Commuter Reservation System</h3>
                 <p>
-                    Designed a fully normalized (3NF) relational database in Oracle SQL comprising 20+ tables, modelling 
-                    trains, schedules, passengers, and reservations using constraints, sequences, and indexed primary/foreign 
-                    keys, ensuring data integrity while reducing redundancy by ~40%.
+                    Designed a <strong>fully normalized (3NF) relational database</strong> in Oracle SQL comprising <strong>20+ tables</strong>, modelling 
+                    trains, schedules, passengers, and reservations using constraints, sequences, and indexed primary/foreign keys, ensuring data integrity while 
+                    <strong>reducing redundancy by ~40%</strong>.
                 </p>
                 <p>
-                    Implemented 10+ PL/SQL packages, procedures and functions to manage reservation state transitions, 
-                    concurrency-safe seat allocation, and automated waitlist handling, ensuring 100% seat consistency under 
-                    concurrent booking scenarios.
+                    Implemented <strong>10+ PL/SQL</strong> packages, procedures and functions to manage reservation state transitions, <strong>concurrency-safe seat 
+                    allocation</strong>, and automated waitlist handling, ensuring <strong>100% seat consistency under concurrent booking scenarios</strong>.
                 </p>
                 <div class="project-tech">
                     <span class="tech-badge">Oracle SQL</span>
                     <span class="tech-badge">PL/SQL</span>
                     <span class="tech-badge">Database Design</span>
-                    <span class="tech-badge">Normalization</span>
+                    <span class="tech-badge">3NF Normalization</span>
+                    <span class="tech-badge">Concurrency Control</span>
                 </div>
                 <div class="project-links">
                     <a href="https://github.com/Prasham09/Grp_3_Commuter_Reservation_System" target="_blank" class="project-link">
@@ -852,44 +898,46 @@
         <h2 class="section-title">Contact.</h2>
         <div class="contact-content">
             <div class="contact-info">
+                <h3 style="color: #1a1a1a; font-size: 1.3rem; margin-bottom: 2rem; font-weight: 600;">Get In Touch</h3>
                 <div class="contact-item">
-                    <span>📧 Email:</span>
-                    <a href="mailto:bansal.t@northeastern.edu" style="color: #60a5fa !important;">bansal.t@northeastern.edu</a>
+                    <span style="color: #1a1a1a; font-weight: 600;">Email:</span>
+                    <a href="mailto:bansal.t@northeastern.edu" style="color: #dc2626 !important;">bansal.t@northeastern.edu</a>
                 </div>
                 <div class="contact-item">
-                    <span>📱 Phone:</span>
-                    <span>(857) 351-5304</span>
+                    <span style="color: #1a1a1a; font-weight: 600;">Phone:</span>
+                    <span style="color: #2a2a2a;">(857) 351-5304</span>
                 </div>
                 <div class="contact-item">
-                    <span>💼 LinkedIn:</span>
-                    <a href="https://www.linkedin.com/in/tanyabansal28" target="_blank" style="color: #60a5fa !important;">linkedin.com/in/tanyabansal28</a>
+                    <span style="color: #1a1a1a; font-weight: 600;">LinkedIn:</span>
+                    <a href="https://www.linkedin.com/in/tanyabansal28" target="_blank" style="color: #dc2626 !important;">linkedin.com/in/tanyabansal28</a>
                 </div>
                 <div class="contact-item">
-                    <span>📍 Location:</span>
-                    <span>Boston, MA</span>
+                    <span style="color: #1a1a1a; font-weight: 600;">Location:</span>
+                    <span style="color: #2a2a2a;">Boston, MA</span>
                 </div>
             </div>
 
             <div class="contact-form">
+                <h3 style="color: #1a1a1a; font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 600;">Send a Message</h3>
                 <form action="https://formsubmit.co/tanyabansaloff@gmail.com" method="POST">
                     <div class="form-group">
                         <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Regarding Job Opportunity" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                        <textarea id="message" name="message" placeholder="I would like to discuss..." required></textarea>
                     </div>
                     
                     <!-- Hidden fields for FormSubmit configuration -->
@@ -898,7 +946,7 @@
                     <input type="hidden" name="_template" value="table">
                     <input type="text" name="_honey" style="display:none">
                     
-                    <button type="submit" class="submit-btn" style="background: linear-gradient(135deg, #3b82f6, #60a5fa) !important;">Send Message</button>
+                    <button type="submit" class="submit-btn" style="background: linear-gradient(135deg, #dc2626, #ef4444) !important;">Send Message</button>
                 </form>
             </div>
         </div>
